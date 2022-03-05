@@ -1,5 +1,16 @@
 const init = () => {
 
+
+    const inputEmail = document.querySelector('input[type="email"]')
+    const inputPassword = document.querySelector('input[type="password"]')
+    const submitButton = document.querySelector('.login-submit')
+
+
+
+
+
+
+
     const validateEmail = (event) => {
         const input = event.currentTarget
         const regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -29,14 +40,16 @@ const init = () => {
 
 
 
-    const inputEmail = document.querySelector('input[type="email"]')
-    const inputPassword = document.querySelector('input[type="password"]')
-    const submitButton = document.querySelector('.login-submit')
+    
 
     inputEmail.addEventListener('input' , validateEmail)
     inputPassword.addEventListener('input', validatePassword)
 
-     const errorHandler = () => {
+
+
+
+    
+    const errorHandler = () => {
         submitButton.classList.remove('loading');
         submitButton.classList.remove('success');
         submitButton.classList.add('error');
