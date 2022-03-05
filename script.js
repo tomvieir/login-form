@@ -71,7 +71,7 @@ const init = () => {
                     return errorHandler()
                 }
                 sucessHandler()
-                console.log(response.bodyUsed) 
+                
             }).catch(() => {
                 errorHandler()
             
