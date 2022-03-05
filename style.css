@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding:0;
+    font-family: sans-serif;
+    text-decoration: none;
+    
+    
+}
+
+/* root */
+
+
+
+.login {
+    height: 100vh;
+    background:linear-gradient(135deg, #74EBD5 0%, #9FACE6 100%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-tittle {
+    margin-bottom: 80px;
+    margin-top: 20px;
+    color:rgba(0, 0, 0, 0.582)
+}
+
+.login-container {
+    background-color: rgba(255, 254, 254, 0.514);
+    width: 250px;
+    height:430px;
+
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:0 40px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+    
+    width: 100%
+}
+
+.login-input {
+    margin-bottom: 5px;
+    background-color: transparent;
+    border: none;
+    width:100%
+}
+.login-input:focus {
+    outline:0;
+}
+
+.login-input--border {
+   width:100%;
+   height:2px;
+   background: rgba(121, 121, 121, 0.219);
+
+   margin-bottom: 45px;
+
+   transition: .3s ease-in-out; 
+}
+
+.login-input--border::after {
+    width:0;
+    content: "";
+    display: block;
+    height: 1px;
+    margin-bottom: 45px;
+    background: linear-gradient(120deg, #e75590, #00c2cb );
+    transition: .3s ease-in-out;
+}
+
+.login-input:focus + .login-input--border::after{
+    width: 100%
+}
+
+
+.login-input--border.error {
+    height:3px;
+    background-color: rgb(223, 1, 1);
+}
+
+
+
+
+
+
+.login-submit {
+ background: linear-gradient(-45deg, #3f00b567, #9f69fe, #27c8b8a6, #3f00b560);
+ width: 100%;
+ margin-bottom: 45px;
+ background-size: 800% 400%;
+ padding:10px;
+ display: inline-block;
+ border: none;
+ border-radius: 7px;
+ font-size: 20px;
+ font-weight: bold;
+ color: white;
+ cursor: pointer;
+ transition: all .5s ease-in-out;
+ animation: gradient 10s infinite cubic-bezier(.62, .28, .23, .99) both;
+}
+
+.login-submit:hover {
+ animation: gradient 3s infinite;
+}
+
+.login-submit:active {
+ animation: gradient 3s infinite;
+}
+
+.login-submit:disabled {
+    background: rgb(163, 163, 163);
+}
+
+.login-input.error {
+    background:red;
+}
+
+.login-input.success {
+    background: green;
+}
+
+@keyframes gradient {
+ 0% {
+  background-position: 0% 50%;
+ }
+
+ 50% {
+  background-position: 100% 50%;
+ }
+
+ 100% {
+  background-position: 0% 50%;
+ }
+}
+
+.login-reset {
+    position: absolute;
+    right: 0;
+    top: 90px;
+
+    font-size: 11px;
+    color: grey;
+}
+
+.border-end {
+    margin-bottom: 10px;
+    color: grey;
+    font-size: 11px;
+}
+
+.create-account--button{
+    width: 140px;
+    height: 20px;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: rgba(148, 40, 190, 0.219);
+    color: aliceblue;
+    font-family:sans-serif;
+    font-weight: 700;
+}
+   
