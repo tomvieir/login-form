@@ -6,29 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     
-    <title>Document</title>
+    <title>Fake Login & Register</title>
 </head>
 <body>
-    <main class="login">
-        <div class="login-container">
-            <h1 class="login-tittle">Login</h1>
-            <form action="" class="login-form">
-                <input class="login-input" type="email" placeholder="e-mail">
-                <span class="login-input--border"></span>
+    <main class="container" >
+        <div class="login" id="card">
+         
+            <div class="face" id="front">
+                <h1 class="login-tittle">Login</h1>
+                <form action="" class="login-form">
+                    <input class="login-input" type="email" placeholder="Email Adress">
+                    <span class="login-input--border"></span>
 
-                <input class="login-input" type="password" placeholder="senha">
-                <span class="login-input--border"></span>
+                    <input class="login-input" type="password" placeholder="Password">
+                    <span class="login-input--border"></span>
 
-                <a href="" class="login-reset">Esqueci a senha </a>
-                <button class="login-submit">Entrar</button>
-            
-                <span class="border-end">Ainda não tem conta?</span>
-                <button class="create-account--button">Fazer cadastro </button>
-            </form>
-            
+                    <a href="" class="login-reset">Forgot Password</a>
+                    <button class="login-submit">Entrar</button>
+                
+                    <span class="border-end">Don't have a account?</span>
+                    <a class="create-account--button" id="button-flip">Sign up now</a>
+                </form>
+                
+            </div>
+
+
+            <div class="face" id="back">
+                <h1 class="register-tittle">New Account</h1>
+                <form action="" class="register-form">
+                    <input class="register-input" type="email" id="email" placeholder="Email Adress">
+                    <span class="register-input--border"></span>
+
+                    <input class="register-input" type="password" id="password" placeholder="Password">
+                    <span class="register-input--border"></span>
+
+                    <input class="confirm-register--input" type="password" placeholder="Confirm Password" required>
+                    <span class="confirm-register-input--border"></span>
+
+                    
+                    <button class="register-submit" id="reg-submit" >Sign Up</button>
+                    <a class="create-account--button" id="button-flip">Return to login</a>   
+                </form>
+                
+            </div>
+
         </div>
     </main>
+    
 
     <script src="./script.js" ></script>
+    
 </body>
 </html>
