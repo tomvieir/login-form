@@ -39,16 +39,16 @@ const init = () => {
 
 
     // aplica didabled no button e adiciona 'erro' no item (input)
-    function disableButton(item) {
+    const disableButton = (element) => {
         submitRegButton.setAttribute('disabled', 'disabled')
         submitButton.setAttribute('disabled', 'disabled')
-        item.nextElementSibling.classList.add('error')
+        element.nextElementSibling.classList.add('error')
     }
     // remove o disable do button e remove o error do item
-    function enableButton (item) {
+    const enableButton = (element) => {
         submitRegButton.removeAttribute('disabled')
         submitButton.removeAttribute('disabled')
-        item.nextElementSibling.classList.remove('error')
+        element.nextElementSibling.classList.remove('error')
     }
 
 
