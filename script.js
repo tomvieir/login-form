@@ -69,7 +69,7 @@ const init = () => {
         submitButton.classList.remove('loading');
         submitButton.classList.remove('success');
         submitButton.classList.add('error');
-        submitButton.textContent = "Error :(";
+        submitButton.textContent = "Email or password invalid";
     }
 
     const errorRegHandler = () => {
@@ -111,10 +111,11 @@ const init = () => {
 
 
 
-
+    
 
 
     // Conditions for Submit Buttons
+    const urlAPI = 'https://reqres.in/api/login'
 
     // Login Submit
     if (submitButton) {
@@ -123,7 +124,7 @@ const init = () => {
 
             submitButton.textContent = "login..."
 
-            fetch('https://reqres.in/api/login', {
+            fetch(urlAPI, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -157,7 +158,7 @@ const init = () => {
             }else {
                 submitRegButton.textContent = "Creating..."
 
-                fetch('https://reqres.in/api/register', {
+                fetch(urlAPI, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
